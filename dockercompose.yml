@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  cricket-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cricket-tracker
+    command: python cricket_score_tracker.py
+    volumes:
+      - .:/app
+    working_dir: /app
